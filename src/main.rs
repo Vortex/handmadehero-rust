@@ -57,7 +57,10 @@ fn main() {
         .resizable()
         .build()
         .unwrap();
+    #[cfg(feature = "vsync")]
     let mut canvas = window.into_canvas().present_vsync().build().unwrap();
+    #[cfg(not(feature = "vsync"))]
+    let mut canvas = window.into_canvas().build().unwrap();
 
     // Create texture for rendering
     let texture_creator = canvas.texture_creator();
