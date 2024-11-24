@@ -8,3 +8,5 @@ libloading = "0.8.5"
 memmap2 = "0.9.5"
 sdl2 = "0.37.0"
 
+[features]
+vsync = []
